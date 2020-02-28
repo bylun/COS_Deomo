@@ -1,0 +1,39 @@
+<view class="head text-center">
+  <image class="logo bg-white" src='/images/logo.png' mode="aspectFill"></image>
+  <view class="title">斐德坊</view>
+</view>
+<view class="content">
+  <text class="text1">登录/注册</text>
+  <view class="login-form">
+    <view class="phone-input ">
+      <input placeholder-class="placeholder" type="number" placeholder="请输入手机号" maxlength="11" bindinput="phoneInput" />
+    </view>
+    <view class="divLine"></view>
+
+    <view class="validate-code-input flex align-end">
+      <input class="flex-sub" placeholder-class="placeholder" type="text" placeholder="验证码" maxlength="4" bindinput="validateCodeInput" />
+      <div class="flex-sub">
+        <canvas class="fr" canvas-id="canvas" bindtap='change'></canvas>
+      </div>
+    </view>
+    <view class="divLine"></view>
+
+    <view class="sms-validate-code-input flex align-center">
+      <input class="flex-sub" placeholder-class="placeholder" type="text" placeholder="短信验证码" maxlength="6" bindinput="smsValidateCodeInput" />
+      <div class="flex-sub">
+        <text class="send-code fr {{sendFlag?'blue-text':'gray-text'}}" bindtap="sendSmsValidateCode">{{time}}</text>
+      </div>
+    </view>
+    <view class="divLine"></view>
+
+    <view class="agree-protocol">
+      <text class="icon iconfont {{radioSelected?'icon-radio-selected':'icon-radio'}}" bindtap="agreeProtocol"></text> 同意
+      <text class="blue-text">《用户服务协议》</text>和
+      <text class="blue-text">《隐私协议》</text>
+
+    </view>
+  </view>
+</view>
+<view class="login flex flex-direction">
+  <button open-type="getUserInfo" class="cu-btn lg login-button" bindgetuserinfo="login">登录</button>
+</view>

@@ -1,0 +1,12 @@
+<view class="view1 flex flex-direction">
+  <button class="cu-btn lg integral-to-tongbei" bindtap="integral2Tongbei">
+    积分转通贝
+  </button>
+</view>
+
+
+<view class="view2 flex flex-direction">
+  <button class="cu-btn lg tongbei-to-integral" bindtap="tongbei2Integral">
+    通贝转积分
+  </button>
+</view>

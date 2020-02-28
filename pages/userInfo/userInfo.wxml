@@ -1,0 +1,101 @@
+<view class='cub-item flex  align-center justify-around'>
+  <view class='flex-sub text-left'>
+    <text>头像</text>
+  </view>
+  <view class='flex-sub text-right' bindtap="setAvatar">
+    <view class="cu-avatar round bg-gray" style="background-image:url({{user.headImg}});">
+    </view>
+    <text class="iconfont icon-youjiantou"></text>
+  </view>
+</view>
+<view class="divLine"></view>
+<view class='cub-item flex  align-center justify-around'>
+  <view class='flex-sub text-left'>
+    <text>姓名*</text>
+  </view>
+  <view class='flex-sub text-right' bindtap="setName">
+    <text>{{user.realName?user.realName:'未设置'}}</text>
+    <text class="iconfont icon-youjiantou"></text>
+  </view>
+</view>
+<view class="divLine"></view>
+<view class='cub-item flex  align-center justify-around'>
+  <view class='flex-sub text-left'>
+    <text>昵称</text>
+  </view>
+  <view class='flex-sub text-right' bindtap="setNickName">
+    <text>{{user.userNickName?user.userNickName:'未设置'}}</text>
+    <text class="iconfont icon-youjiantou"></text>
+  </view>
+</view>
+<view class="divLine"></view>
+<view class='cub-item flex  align-center justify-around'>
+  <view class='flex-sub text-left'>
+    <text>性别</text>
+  </view>
+  <view class='flex-sub text-right' bindtap="setGender">
+    <text>{{user.sex?user.sex==0?'未知':user.sex==1?'男':'女':'未设置'}}</text>
+    <text class="iconfont icon-youjiantou"></text>
+  </view>
+</view>
+<view class="divLine"></view>
+<view class='cub-item flex  align-center justify-around'>
+  <view class='flex-sub text-left'>
+    <text>手机</text>
+  </view>
+  <view class='flex-sub text-right text-grey'>
+    <text>{{user.telNo?user.telNo:'未设置'}}</text>
+    <text class="iconfont icon-youjiantou"></text>
+  </view>
+</view>
+<view class="divLine"></view>
+<view class='cub-item flex  align-center justify-around'>
+  <view class='flex-sub text-left'>
+    <text>邮箱*</text>
+  </view>
+  <view class='flex-sub text-right' bindtap="setMail">
+    <text>{{user.email?user.email:'未设置'}}</text>
+    <text class="iconfont icon-youjiantou"></text>
+  </view>
+</view>
+<view class="divLine"></view>
+<view class='cub-item flex  align-center justify-around'>
+  <view class='flex-sub text-left'>
+    <text>身份证号*</text>
+  </view>
+  <view class='flex-sub text-right' bindtap="setIdCard">
+    <text>{{user.idcard?user.idcard:'未设置'}}</text>
+    <text class="iconfont icon-youjiantou"></text>
+  </view>
+</view>
+<view class="divLine"></view>
+
+<modal hidden="{{nameModal}}" title="设置姓名" bindconfirm="nameModalConfirm" bindcancel="nameModalCancel">
+  <input type='text' placeholder="请输入真实姓名" value="{{input.realName}}" bindinput="nameInput" auto-focus/>
+</modal>
+
+<modal hidden="{{nickNameModal}}" title="设置昵称" bindconfirm="nickNameModalConfirm" bindcancel="nickNameModalCancel">
+  <input type='text' placeholder="请输入昵称" value="{{input.userNickName}}" bindinput="nickNameInput" auto-focus/>
+</modal>
+
+<modal hidden="{{genderModal}}" title="设置性别" bindconfirm="genderModalConfirm" bindcancel="genderModalCancel">
+  <view class='list-msg' bindtap='bindShowMsg'>
+    <text>{{input.sex?input.sex==0?'未知':input.sex==1?'男':'女':''}}</text>
+  </view>
+  <view class="select_box" wx:if="{{select}}">
+    <view class="select_one" bindtap="genderInput" data-name="1">男</view>
+    <view class="select_one" bindtap="genderInput" data-name="2">女</view>
+  </view>
+</modal>
+
+<modal hidden="{{phoneModal}}" title="设置手机" bindconfirm="phoneModalConfirm" bindcancel="phoneModalCancel">
+  <input type='number' placeholder="请输入手机" value="{{input.telNo}}" bindinput="phoneInput" auto-focus/>
+</modal>
+
+<modal hidden="{{mailModal}}" title="设置邮箱" bindconfirm="mailModalConfirm" bindcancel="mailModalCancel">
+  <input type='text' placeholder="请输入邮箱" value="{{input.email}}" bindinput="mailInput" auto-focus/>
+</modal>
+
+<modal hidden="{{idCardModal}}" title="设置身份证号" bindconfirm="idCardModalConfirm" bindcancel="idCardModalCancel">
+  <input type='text' placeholder="请输入身份证号" value="{{input.idcard}}" bindinput="idCardInput" auto-focus/>
+</modal>

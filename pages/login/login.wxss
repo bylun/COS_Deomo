@@ -1,0 +1,21 @@
+.wx-login {
+  padding-top: 300rpx;
+  margin: 0 80rpx;
+}
+
+.phone-login {
+  padding-top: 150rpx;
+  margin: 0 80rpx;
+}
+
+.wx-login-button {
+  border-radius: 30rpx;
+  height: 100rpx !important;
+  background-color: #21c517 !important;
+}
+
+.phone-login-button {
+  border-radius: 30rpx;
+  height: 100rpx !important;
+  background-color: #157fb7 !important;
+}

@@ -1,0 +1,8 @@
+<view class='flex padding align-center justify-around'>
+  <view class='flex-sub text-left'>
+    <text>新消息通知</text>
+  </view>
+  <view class='flex-sub text-right'>
+    <switch checked bindchange="switchChange" />
+  </view>
+</view>

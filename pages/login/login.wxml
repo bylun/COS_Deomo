@@ -1,0 +1,12 @@
+<view class="wx-login flex flex-direction">
+  <button open-type="getUserInfo" bindgetuserinfo="login" class="cu-btn lg wx-login-button">
+    <text class="iconfont icon-weixin"></text>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;微信快速登录</text>
+  </button>
+</view>
+
+<navigator class="phone-login" url="/pages/phoneLogin/phoneLogin" open-type="navigate" hover-class="other-navigator-hover">
+  <view class="flex flex-direction">
+    <button class="cu-btn lg phone-login-button">使用手机号登录</button>
+  </view>
+</navigator>

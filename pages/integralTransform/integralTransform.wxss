@@ -1,0 +1,21 @@
+.view1 {
+  padding-top: 300rpx;
+  margin: 0 80rpx;
+}
+
+.view2 {
+  padding-top: 150rpx;
+  margin: 0 80rpx;
+}
+
+.integral-to-tongbei {
+  border-radius: 30rpx;
+  height: 100rpx !important;
+  background-color: #21c517 !important;
+}
+
+.tongbei-to-integral {
+  border-radius: 30rpx;
+  height: 100rpx !important;
+  background-color: #157fb7 !important;
+}

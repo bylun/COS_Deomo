@@ -1,0 +1,50 @@
+<wxs module="util" src="../../utils/displayUtil.wxs"></wxs>
+<view class="info">
+  <view class="flex align-center margin-bottom">
+    <view class="flex-sub">
+      <image mode="aspectFill" src="{{avatarUrl}}" class="avatar"></image>
+    </view>
+    <view class="flex-twice text-center">
+      <view class="account">{{util.toFix(account)}}</view>
+      <view class="tongbei">通贝</view>
+    </view>
+    <view class="flex-sub">
+    </view>
+  </view>
+  <text>账户地址</text>
+  <view class="margin-bottom address-font">
+    <text class="address">{{address}}</text>
+    <view class="fr ">
+      <text class="iconfont icon-fuzhi" bindtap="copy"></text>
+    </view>
+  </view>
+  <view class="padding-bottom">
+    <text bindtap="lookPrivateKey">查看私钥</text>
+  </view>
+</view>
+<view class="card-list flex align-center text-center">
+  <view class="flex-sub">
+    <navigator url="/pages/integralTransform/integralTransform" open-type="navigate" hover-class="other-navigator-hover">
+      <view>
+        <text class="iconfont icon-scan icon-font"></text>
+      </view>
+      扫一扫
+    </navigator>
+  </view>
+  <view class="flex-sub">
+    <navigator url="/pages/integralTransform/integralTransform" open-type="navigate" hover-class="other-navigator-hover">
+      <view>
+        <text class="iconfont icon-zhuanhuan icon-font"></text>
+      </view>
+      积分转换
+    </navigator>
+  </view>
+  <view class="flex-sub">
+    <navigator url="/pages/transactionRecord/transactionRecord" open-type="navigate" hover-class="other-navigator-hover">
+      <view>
+        <text class="iconfont icon-jiaoyijilu icon-font"></text>
+      </view>
+      交易记录
+    </navigator>
+  </view>
+</view>

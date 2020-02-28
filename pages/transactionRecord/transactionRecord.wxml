@@ -1,0 +1,37 @@
+<wxs module="util" src="../../utils/displayUtil.wxs"></wxs>
+
+<view class="info">
+  <view class="text-center">
+    <view class="account">{{util.toFix(account)}}</view>
+    <view class="tongbei">通贝</view>
+  </view>
+</view>
+<view class="" wx:for="{{transactionRecords}}" wx:key>
+  <view class="content flex align-center">
+    <view class="flex-sub">
+      消费
+      <view>
+        {{item.crtTime}}
+      </view>
+    </view>
+    <view class="flex-sub text-right">
+      {{util.toFix(item.amount/100.0)}}
+    </view>
+  </view>
+  <view class="divLine"></view>
+</view>
+<view wx:if='{{!isRefreshing}}'>
+  <view class="weui-loadmore" wx:if='{{isLoadingMoreData}}'>
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+  <view wx:elif='{{hasMoreData}}'>
+    <view bindtap='onReachBottom'></view>
+  </view>
+    <view class="weui-loadmore" wx:elif='{{util.getLength(transactionRecords)==0}}'>
+    <view class="weui-loadmore__tips">无记录</view>
+  </view>
+  <view class="weui-loadmore" wx:else>
+    <view class="weui-loadmore__tips">没有更多了</view>
+  </view>
+</view>

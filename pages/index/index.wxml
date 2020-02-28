@@ -1,0 +1,19 @@
+<view class="bg-white content">
+  <view class="flex margin-bottom text-center">
+    <view class="flex-sub">
+      <text>区块\n{{blockNumber}}</text>
+    </view>
+    <view class="flex-sub">
+      <text>交易量\n{{transactionNumber}}</text>
+    </view>
+    <view class="flex-sub">
+      <text>通贝\n{{tongBei}}</text>
+    </view>
+  </view>
+</view>
+
+<navigator url="/pages/login/login" open-type="navigate" hover-class="other-navigator-hover" hidden="{{hasLogined}}">
+  <view class="login-button flex flex-direction">
+    <button class="cu-btn bg-gradual-blue lg">登录</button>
+  </view>
+</navigator>

@@ -1,0 +1,38 @@
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 200rpx;
+  background-color: #eee;
+}
+
+.info {
+  padding: 30rpx 40rpx 0 40rpx;
+  background: linear-gradient(#1488ba, #1cbbb4);
+}
+
+.account {
+  color: #fff;
+  font-size: 50rpx;
+}
+
+.tongbei {
+  color: #fff;
+}
+
+.address-font {
+  font-size: 40rpx;
+}
+
+.address {
+  color: #f2cc33;
+}
+
+.card-list {
+  margin-top: 80rpx;
+  font-size: 32rpx;
+}
+
+.icon-font {
+  color: #1488ba;
+  font-size: 64rpx;
+}

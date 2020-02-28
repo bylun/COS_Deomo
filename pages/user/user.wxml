@@ -1,0 +1,84 @@
+<view class='container'>
+  <view class='userinfo flex padding align-center'>
+    <view class='flex-sub text-center'>
+      <!-- <open-data type="userAvatarUrl" default-avatar="/images/user-unlogin.png" class="user-avatar bg-white"></open-data> -->
+      <image class="user-avatar bg-white" src="{{hasLogined?user.headImg:'/images/user-unlogin.png'}}"></image>
+    </view>
+    <view class='flex-twice text-left '>
+      <text class="text-white nickName" wx:if="{{hasLogined}}">{{user.userNickName}}</text>
+      <text class="text-white " wx:else>登陆后为您提供相关服务</text>
+    </view>
+    <view class='flex-sub text-center text-xxl'>
+      <view class='margin-tb-center'>
+        <navigator url="/pages/login/login" open-type="navigate" hover-class="other-navigator-hover">
+          <button class="cu-btn round bg-blue login-btn shadow" wx:if="{{!hasLogined}}">
+            立即登录
+          </button>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="cub-list">
+
+    <view class='cub-item flex padding align-center justify-around' bindtap="blockChainWallet">
+      <view class='flex-sub text-left'>
+        <text class="iconfont icon-qianbao"></text>
+        <text>\t区块链钱包</text>
+      </view>
+      <view class='flex-sub text-right'>
+        <text class="iconfont icon-youjiantou"></text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+
+
+    <view class='cub-item flex align-center justify-around' bindtap="userInfo">
+      <view class='flex-sub text-left'>
+        <text class="iconfont icon-wode"></text>
+        <text>\t我的资料</text>
+      </view>
+      <view class='flex-sub text-right'>
+        <text class="iconfont icon-youjiantou"></text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+
+
+    <view class='cub-item flex padding align-center justify-around'>
+      <view class='flex-sub text-left'>
+        <text class="iconfont icon-banbengengxin"></text>
+        <text>\t版本信息</text>
+      </view>
+      <view class='flex-sub text-right version'>
+        <text>{{version}}</text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+
+
+    <navigator url="/pages/about/about" open-type="navigate" hover-class="other-navigator-hover">
+      <view class='cub-item flex padding align-center justify-around'>
+        <view class='flex-sub text-left'>
+          <text class="iconfont icon-guanyuwomen"></text>
+          <text>\t关于</text>
+        </view>
+        <view class='flex-sub text-right'>
+          <text class="iconfont icon-youjiantou"></text>
+        </view>
+      </view>
+      <view class="divLine"></view>
+    </navigator>
+
+    <view class='cub-item flex padding align-center justify-around' bindtap="setting">
+      <view class='flex-sub text-left'>
+        <text class="iconfont icon-shezhi"></text>
+        <text>\t设置</text>
+      </view>
+      <view class='flex-sub text-right'>
+        <text class="iconfont icon-youjiantou"></text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="content">
+    <text>{{privateKey}}</text>\t
+    <text class="iconfont icon-fuzhi" bindtap="copy"></text>
+  </view>
+
+</view>

@@ -1,0 +1,24 @@
+page{
+  font-size: 40rpx;
+}
+
+switch{
+  zoom: 0.7;
+}
+
+/* .wx-switch-input {
+  width: 100rpx !important;
+  height: 50rpx !important;
+}
+
+.wx-switch-input::before {
+  width: 99rpx !important;
+  height: 47rpx !important;
+}
+
+.wx-switch-input::after {
+  width: 47rpx !important;
+  height: 47rpx !important;
+}
+ */
+ 

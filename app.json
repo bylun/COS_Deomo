@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/userInfo/userInfo",
+    "pages/transactionRecord/transactionRecord",
+    "pages/phoneLogin/phoneLogin",
+    "pages/blockChainWallet/blockChainWallet",
+    "pages/setting/setting",
+    "pages/login/login",
+    "pages/lookPrivateKey/lookPrivateKey",
+    "pages/setPrivateKeyPassword/setPrivateKeyPassword",
+    "pages/setPrivateKeyPassword/repeatPrivateKeyPassword/repeatPrivateKeyPassword",
+    "pages/integralTransform/integralTransform",
+    "pages/cart/cart",
+    "pages/about/about",
+    "pages/lookPrivateKey/validatePassword/validatePassword"
+  ],
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#1488ba",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/tabBar/index_selected.png",
+        "iconPath": "images/tabBar/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/tabBar/cart_selected.png",
+        "iconPath": "images/tabBar/cart.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "images/tabBar/user_selected.png",
+        "iconPath": "images/tabBar/user.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1488ba",
+    "navigationBarTitleText": "斐德坊",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}
